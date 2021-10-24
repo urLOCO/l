@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -19,6 +19,72 @@
   html {
       font-family: 'Poppins', sans-serif;
   }
+  
+  #recentPosts ul li {padding-top:6em;}
+  
+  a i {padding:0 10px;}
+  a:hover {font-weight:bold;}
+.news_hor {
+font-family: Poppins;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  max-width: 150px;
+  background-color: #ffffff;
+  color: black;
+  text-align: left;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  float:left;
+}
+
+.news_hor img {
+  text-align:center;
+  max-width: 150px;
+  position: relative;
+  height: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.news_hor:hover img,
+.news_hor.hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.news_hor figcaption {
+  padding: 5%;
+  padding-bottom: 1px;
+  width: 90%;
+  background-color: #ffffff;
+}
+
+.news_hor h3 {
+  font-family: "Poppins";
+  text-transform: none;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 3px 0;
+}
+
+.news_hor a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.news_hor:hover {font-weight:600;}
+
+.wrapper {
+    min-height: calc(100vh - 50px);
+}
+footer {
+    height: 20px;
+}
+
 </style>
   
   
@@ -37,6 +103,7 @@
 </head>
 
 <body>
+<div class="wrapper">
 <div class="px-4 mx-auto mb-4 sm:max-w-xl">
   <div class="grid max-w-2xl sm:mx-auto">
       <div class="flex items-center justify-center text-center p-5">
@@ -45,97 +112,79 @@
             <img class="rounded-full w-28 mb-3" src="https://i.ibb.co/y4b85wv/Untitled-1.png" alt="" />
           </div>
           <p class="text-sm text-gray-900 mb-2">Revista digital y medio de difusión independiente. Nos especializamos en música, cobertura de conciertos, festivales y entretenimiento.</p>
+		  <p class="text-sm text-gray-900 mb-2" style="color:red;display:block;">Siguenos en redes sociales:</p><br/>
         </div>
       </div>
   </div>
-</div>
+  <div class="grid max-w-2x1 sm:mx-auto">
+    <div class="flex items-center justify-center text-center" style="margin-top:-50px;">
+	
+
+
+    <a href="https://www.twitter.com/revistaloco/"" target="_blank">
+    
+          <i class="fab fa-twitter"></i>
+     
+    </a>
+	    <a href="https://www.instagram.com/revistaloco/"" target="_blank">
+    
+          <i class="fab fa-instagram"></i>
+     
+    </a>
+	    <a href="https://www.facebook.com/revistaloco/"" target="_blank">
+    
+          <i class="fab fa-facebook"></i>
+     
+    </a>
+
+	    <a href="https://www.tiktok.com/revistaloco/"" target="_blank">
+    
+          <i class="fab fa-tiktok"></i>
+     
+    </a>
+	    <a href="http://m.me/revistaloco" target="_blank">
+    
+          <i class="fab fa-facebook-messenger"></i>
+     
+    </a>
+
+
+  </div>
+</div>  </div>
+
 <div class="px-4 mx-auto mb-4 sm:max-w-xl">
-  <div class="grid max-w-2xl sm:mx-auto">
-    <a href="http://lo-co.ga" target="_blank" class="overflow-hidden rounded-2xl shadow-sm">
-      <div style="background-color: #5865F2;" class="text-white flex items-center justify-between p-5 rounded-sm">
+  <div class="grid max-w-2xl sm:mx-auto fondo"> 
+    <a href="http://revistaloco.ga" target="_blank" class="overflow-hidden fondo rounded-2xl shadow-sm">
+      <div style="background-color: #392358;" class="text-white flex items-center justify-between p-5 rounded-sm">
         <div class="pr-4">
           <i class="fas fa-newspaper"></i>
           <span class="font-semibold leading-5">Noticias</span>
         </div>
+		
       </div>
     </a>
+		<p style="padding-left:1em;padding-top:1em;"><b>Últimas notas:</b></p>
+		<div style="padding-left:1em;" class="flex items-center justify-center" id="recentPosts"></div>
   </div>
 </div>
-<div class="px-4 mx-auto mb-4 sm:max-w-xl">
-  <div class="grid max-w-2xl sm:mx-auto">
-    <a href="https://www.twitter.com/revistaloco/" target="_blank" class="overflow-hidden rounded-2xl shadow-sm">
-      <div style="background-color: #1DA1F2;" class="text-white flex items-center justify-between p-5 rounded-sm">
-        <div class="pr-4">
-          <i class="fab fa-twitter"></i>
-          <span class="font-semibold leading-5">Twitter</span>
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
-<div class="px-4 mx-auto mb-4 sm:max-w-xl">
-  <div class="grid max-w-2xl sm:mx-auto">
-    <a href="https://www.instagram.com/revistaloco/" target="_blank" class="overflow-hidden border hover:border-gray-400 transition-colors rounded-2xl shadow-sm">
-      <div style="background-color: #833AB4;" class="text-white flex items-center justify-between p-5 rounded-sm">
-        <div class="pr-4">
-          <i class="fab fa-instagram"></i>
-          <span class="font-semibold leading-5">Instagram</span>
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
-<div class="px-4 mx-auto mb-4 sm:max-w-xl">
-  <div class="grid max-w-2xl sm:mx-auto">
-    <a href="https://www.facebook.com/revistaloco/" target="_blank" class="overflow-hidden rounded-2xl shadow-sm">
-      <div style="background-color: #4267B2;" class="text-white flex items-center justify-between p-5 rounded-sm">
-        <div class="pr-4">
-          <i class="fab fa-facebook"></i>
-          <span class="font-semibold leading-5">Facebook</span>
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
+
 <div class="px-4 mx-auto mb-4 sm:max-w-xl">
   <div class="grid max-w-2xl sm:mx-auto">
     <a href="https://open.spotify.com/user/8chd79pv40a5xu3mjuv8x9rt5" target="_blank" class="overflow-hidden rounded-2xl shadow-sm">
       <div style="background-color: #1cba59;" class="text-white flex items-center justify-between p-5 rounded-sm">
         <div class="pr-4">
           <i class="fab fa-spotify"></i>
-          <span class="font-semibold leading-5">Spotify</span>
+          <span class="font-semibold leading-5">Escucha LOCO playlist</span>
         </div>
       </div>
     </a>
   </div>
 </div>
+
+
 <div class="px-4 mx-auto mb-4 sm:max-w-xl">
   <div class="grid max-w-2xl sm:mx-auto">
-    <a href="https://www.youtube.com/revistaloco/" target="_blank" class="overflow-hidden rounded-2xl shadow-sm">
-      <div style="background-color: #ff0050;" class="text-white flex items-center justify-between p-5 rounded-sm">
-        <div class="pr-4">
-          <i class="fab fa-tiktok"></i>
-          <span class="font-semibold leading-5">TikTok</span>
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
-<div class="px-4 mx-auto mb-4 sm:max-w-xl">
-  <div class="grid max-w-2xl sm:mx-auto">
-    <a href="http://m.me/revistaloco" target="_blank" class="overflow-hidden rounded-2xl shadow-sm">
-      <div style="background-color: #0078FF;;" class="text-white flex items-center justify-between p-5 rounded-sm">
-        <div class="pr-4">
-          <i class="fab fa-facebook-messenger"></i>
-          <span class="font-semibold leading-5">Messenger</span>
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
-<div class="px-4 mx-auto mb-4 sm:max-w-xl">
-  <div class="grid max-w-2xl sm:mx-auto">
-    <a href="mailto:hola@lo-co.ga" target="_blank" class="overflow-hidden border hover:border-gray-400 transition-colors rounded-2xl shadow-sm">
+    <a href="mailto:hola@revistaloco.ga" target="_blank" class="overflow-hidden border hover:border-gray-400 transition-colors rounded-2xl shadow-sm">
       <div class="flex items-center justify-between p-5 bg-white rounded-sm">
         <div class="pr-4">
           <i class="far fa-envelope"></i>
@@ -144,7 +193,127 @@
       </div>
     </a>
   </div>
+  
 </div>
+</div>
+<footer class="px-4 mx-auto mb-4 sm:max-w-xl">
+ <div class="grid max-w-2xl sm:mx-auto">
+<p class="text-sm text-gray-900 mb-2" style="text-align:center;">Hecho por <a href="mailto:k@rtist.ml">KA</a></p>
+</div></footer>
+<!-- need jquery for this, this line should really go in your theme html
+     just after the <head> marker, might work OK here if you aren't already using jquery -->
+<script	src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<!-- Mimic the style of the tumblr headers from your theme -->
+
+
+<!-- The javascript below will insert your recent posts lists in here -->
+
+
+<script type="text/javascript" src="http://revistaloco.tumblr.com/api/read/json"></script>
+<!-- // when this script is run, it sets a variable named tumblr_api_read to the result -->
+
+<!-- // this is the script that builds the html to go in the div above -->
+<script type='text/javascript'>
+    
+    // number of posts to fetch
+    var recent_posts_count = tumblr_api_read.posts.length < 3 ? tumblr_api_read.posts.length  : 3;
+	
+	// maximum length of titles for truncation (plus 3 for ...)
+	var truncate_length    = 40;
+	
+	// start a div for the recent posts, you can add any ul,etc, formatting here also
+	var recentPostsHtml = "<div>";
+	
+	// loop around and proess recent_post_count number of recent posts
+	for (var i = 0; i < recent_posts_count; i++) {
+			
+			// get a post
+			var post          = tumblr_api_read.posts[i];
+			
+			// we need to extract different fields for different kinds of post
+			var extract_field = '';
+			// we may wish to truncate some (or all, or none) of them
+			var truncate      = true;
+			// we may wish to add a prefix to indictae (for example) the kind of post
+			var prefix        = '';
+			
+			
+			// regular 'text' post
+			if(post.type === "regular")
+			{
+				truncate      = false;
+				extract_field = "regular-title";
+			}
+			// link post
+			else if(post.type === "link")
+			{
+				extract_field = "link-text";
+			}
+			// quote post
+			else if(post.type === "quote")
+			{
+				extract_field = "quote-text";
+			}
+			// photo post
+			else if(post.type === "photo")
+			{
+				prefix        ="[Galeria] ";
+				// note we use 'slug' as the field here, because tumblr provides us with
+				// a nice truncated short clean summary. whereas the captions have html in them
+				// html like div an p, which will muck up the formatting
+				extract_field = "slug";
+			}
+			// Video post
+			else if( post.type === "video")
+			{
+
+				extract_field = "slug";
+			}
+			// Audio post
+			else if( post.type === "audio")
+			{
+				// slug again, see note above
+				extract_field = "slug";
+			}
+			// Conversation post
+			else if( post.type === "conversation")
+			{
+
+				extract_field = "conversation-title";
+
+			}
+			// Ask/Answer post
+			else if( post.type === "answer")
+			{
+
+				// might need to be 'slug' as well
+				extract_field = "answer";
+			}
+			
+			var title_field = $.trim(post[extract_field]);
+
+			if(title_field) 
+			{
+				// truncate and add elipses if desired
+				if(title_field.length > truncate_length)
+				{
+					title_field = title_field.substring( 0, truncate_length ) + "...";
+				}
+				
+				// add it into the html string
+				recentPostsHtml += '<figure class="news_hor"><img src="https://imgs.lo-co.ga/' + post.id + '.jpg"/><figcaption><h3>' + prefix + title_field + '</h3></figcaption><a href="' + post.url + '"></a></figure>';
+				
+			}
+			
+	}
+	recentPostsHtml += '</div>';
+	$("#recentPosts").append(recentPostsHtml);
+</script>
+
+
+
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 </html>
