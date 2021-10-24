@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -218,59 +218,36 @@ footer {
     
     // number of posts to fetch
     var recent_posts_count = tumblr_api_read.posts.length < 3 ? tumblr_api_read.posts.length  : 3;
-	
-	// maximum length of titles for truncation (plus 3 for ...)
 	var truncate_length    = 40;
-	
-	// start a div for the recent posts, you can add any ul,etc, formatting here also
 	var recentPostsHtml = "<div>";
-	
-	// loop around and proess recent_post_count number of recent posts
 	for (var i = 0; i < recent_posts_count; i++) {
-			
-			// get a post
 			var post          = tumblr_api_read.posts[i];
-			
-			// we need to extract different fields for different kinds of post
 			var extract_field = '';
-			// we may wish to truncate some (or all, or none) of them
 			var truncate      = true;
-			// we may wish to add a prefix to indictae (for example) the kind of post
 			var prefix        = '';
-			
-			
-			// regular 'text' post
 			if(post.type === "regular")
 			{
 				truncate      = false;
 				extract_field = "regular-title";
 			}
-			// link post
 			else if(post.type === "link")
 			{
 				extract_field = "link-text";
 			}
-			// quote post
 			else if(post.type === "quote")
 			{
 				extract_field = "quote-text";
 			}
-			// photo post
 			else if(post.type === "photo")
 			{
 				prefix        ="[Galeria] ";
-				// note we use 'slug' as the field here, because tumblr provides us with
-				// a nice truncated short clean summary. whereas the captions have html in them
-				// html like div an p, which will muck up the formatting
 				extract_field = "slug";
 			}
-			// Video post
 			else if( post.type === "video")
 			{
 
 				extract_field = "slug";
 			}
-			// Audio post
 			else if( post.type === "audio")
 			{
 				// slug again, see note above
@@ -283,11 +260,8 @@ footer {
 				extract_field = "conversation-title";
 
 			}
-			// Ask/Answer post
 			else if( post.type === "answer")
 			{
-
-				// might need to be 'slug' as well
 				extract_field = "answer";
 			}
 			
@@ -310,10 +284,6 @@ footer {
 	recentPostsHtml += '</div>';
 	$("#recentPosts").append(recentPostsHtml);
 </script>
-
-
-
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 </html>
